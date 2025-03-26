@@ -1,6 +1,7 @@
 import LinkedinIcon from "../assets/linkedin.png"
 import FacebookIcon from "../assets/facebook.png"
 import GithubIcon from "../assets/github.png"
+import StravaIcon from "../assets/strava.png"
 
 const SocialMediaIcons = () => {
     const iconStyles = "hover:opacity-50 transition duration-500";
@@ -19,6 +20,13 @@ const SocialMediaIcons = () => {
                 target="_blank"
             >
                 <img alt="linkedin-link" src={LinkedinIcon} />
+            </a>
+            <a
+                className={`${iconStyles} w-9/10 h-9/10`}
+                href="https://www.strava.com/athletes/dungdt212"
+                target="_blank"
+            >
+                <img alt="strava-link" src={StravaIcon} />
             </a>
             <a
                 className={iconStyles}

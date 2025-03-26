@@ -11,7 +11,7 @@ import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState('home');
+  const [selectedPage, setSelectedPage] = useState("home");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const isAboveMedium = useMediaQuery("(min-width: 1060px)");
 
