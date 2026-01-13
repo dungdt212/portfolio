@@ -25,7 +25,7 @@ const Skills = () => {
                 </p>
                 <LineGradient width='w-1/3' />
                 <p className='mt-10 mb-7'>
-                    I have acquired and am improving the necessary skills to become a front-end developer.
+                    I have acquired and am improving the necessary skills to become a Front-end and Wordpress developer.
                 </p>
             </motion.div>
 
@@ -66,7 +66,7 @@ const Skills = () => {
                     <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
                 </div>
                 <div className="mt-5">
-                    <p className='mb-3'>Proficient in HTML, CSS (Tailwind), and JavaScript (React).</p>
+                    <p className='mb-3'>Proficient in Wordpress (PHP), CSS (Tailwind), JavaScript (NextJS).</p>
                     <p className='mb-3'>Experienced in state management, API integration.</p>
                     <p>Familiar with Version control (Git)</p>
                 </div>
