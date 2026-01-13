@@ -3,6 +3,11 @@ import LineGradient from "../components/LineGradient";
 import Fitness from "../assets/fitness.jpeg";
 import Booki from "../assets/booki.jpeg";
 import Thesis1 from "../assets/thesis1.jpeg";
+import LLS from "../assets/LLS.png";
+import LLSAdmin from "../assets/LLSAdmin.png";
+import KCX from "../assets/KCX.png";
+import CNC from "../assets/CNC.png";
+import FAMO from "../assets/FAMO.png";
 import Thesis2 from "../assets/thesis2.jpeg";
 import Bksoft from "../assets/bksoft.jpeg";
 import Dbs from "../assets/dbs.jpeg";
@@ -20,13 +25,19 @@ const projectVariant = {
     visible: { opacity: 1, scale: 1 }, 
 };
 
-const Project = ({ title, description, technology, imgSrc }) => {
+const Project = ({ title, description, technology, imgSrc, link }) => {
     const overlayStyles = `absolute w-full h-full opacity-0 hover:opacity-90 transition duration-500
         bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue border-double border-4 border-sky-500`;
     const projectTitle = title.split(" ").join("-").toLowerCase();
 
     return (
-        <motion.div variants={projectVariant} className="relative">
+        <motion.a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            variants={projectVariant}
+            className="relative cursor-pointer"
+        >
             <div className={overlayStyles}>
                 <p className="font-playfair text-2xl">{title}</p>
                 <p className="mt-10">{description}</p>
@@ -34,53 +45,83 @@ const Project = ({ title, description, technology, imgSrc }) => {
             </div>
 
             <img src={imgSrc} alt={projectTitle} />
-        </motion.div>
+        </motion.a>
     );
 };
 
+
 const listProject = [
+    {
+        title: "Lover's Lawn Services",
+        description: "A promotional website for a lawn care service, user-friendly design.",
+        technology: "Technology: WordPress, Elementor",
+        imgSrc: LLS,
+        link: "https://loverslawnservices.com/",
+    },
+    {
+        title: "Admin dashboard - LLS",
+        description: "An admin dashboard for managing lawn service operations, including booking management, staff coordination, and revenue tracking.",
+        technology: "Technology: Tailwind, NextJS",
+        imgSrc: LLSAdmin,
+        link: "#projects",
+    },
+    {
+        title: "Kim Cuong Xanh",
+        description: "A real estate service website focused on property presentation and clear service promotion.",
+        technology: "Technology: WordPress, Elementor",
+        imgSrc: KCX,
+        link: "https://h6.homenest.tech/",
+    },
+    {
+        title: "CNC Marketplace",
+        description: "A modern CNC marketplace platform enabling users to publish, browse, and trade CNC design templates.",
+        technology: "Technology: WordPress, JavaScript",
+        imgSrc: CNC,
+        link: "https://thegioimaucnc.com/",
+    },
+    {
+        title: "Famo Shipping",
+        description: "A website showcasing international shipping and sea freight services.",
+        technology: "Technology: WordPress, Elementor",
+        imgSrc: FAMO,
+        link: "https://famoshipping.com/",
+    },
     {
         title: "Booki website",
         description: "“Build a demo website to manage/order book online.”",
         technology: "Technology: Bootstrap, jQuery, ReactJS",
         imgSrc: Booki,
+        link: "#projects",
     },
     {
         title: "Undergraduate thesis",
         description: "“Building a sales management system for retail chains.”",
         technology: "Technology: Spring Boot, React, AntD",
         imgSrc: Thesis1,
+        link: "#projects",
     },
     {
         title: "Databae Systems course ",
         description: "“Build a DS for supermarket chain's membership registration”",
         technology: "Technology: MySQL, Bootstrap, Node.JS",
         imgSrc: Dbs,
+        link: "#projects",
     },
     {
         title: "Fitness website",
         description: "Landing page of fitness website.",
         technology: "Technology: TypeScript, Tailwind, React", 
         imgSrc: Fitness,
+        link: "#projects",
     },
     {
         title: "BKSoft",
         description: "An assignment of Web programming course",
         technology: "Technology: Bootstrap, ReactJS",
         imgSrc:Bksoft,
+        link: "#projects",
     },
-    {
-        title: "Selft study",
-        description: "Started self-learning React with a small project.",
-        technology: "Technology: JavaScript, React",
-        imgSrc: Calc,
-    },
-    {
-        title: "Undergraduate thesis",
-        description: "“Building a sales management system for retail chains.”",
-        technology: "Technology: JavaScript, React",
-        imgSrc: Thesis2,
-    },
+
 ];
 
 const Projects = () => {
@@ -130,7 +171,14 @@ const Projects = () => {
                         BEAUTIFUL USER INTERFACE
                     </div>
                     {listProject.map(p => (
-                        <Project title={p.title} description={p.description} technology={p.technology} imgSrc={p.imgSrc} />
+                        <Project
+                            key={p.title}
+                            title={p.title}
+                            description={p.description}
+                            technology={p.technology}
+                            imgSrc={p.imgSrc}
+                            link={p.link}
+                        />
                     ))}
                     <div className="flex justify-center items-center text-center font-playfair p-10 text-2xl bg-blue
                         font-semibold max-w-[400px] max-h-[400px]"
