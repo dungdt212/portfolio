@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import LineGradient from "../components/LineGradient";
-import Fitness from "../assets/fitness.jpeg";
 import Booki from "../assets/booki.jpeg";
 import Thesis1 from "../assets/thesis1.jpeg";
 import LLS from "../assets/LLS.png";
@@ -8,10 +7,9 @@ import LLSAdmin from "../assets/LLSAdmin.png";
 import KCX from "../assets/KCX.png";
 import CNC from "../assets/CNC.png";
 import FAMO from "../assets/FAMO.png";
-import Thesis2 from "../assets/thesis2.jpeg";
 import Bksoft from "../assets/bksoft.jpeg";
-import Dbs from "../assets/dbs.jpeg";
-import Calc from "../assets/calc.jpeg";
+import Fitness from "../assets/fitness.jpeg";
+import HOMENEST_IMG from "../assets/homenest-software.png";
 
 const container = {
     hidden: {},
@@ -52,6 +50,13 @@ const Project = ({ title, description, technology, imgSrc, link }) => {
 
 const listProject = [
     {
+        title: "HomeNest Software",
+        description: "“Official corporate website using Headless CMS architecture, optimized for high-end enterprise aesthetics and superior SEO performance.”",
+        technology: "Next.js (App Router), Tailwind CSS, Framer Motion, GraphQL, Headless WordPress",
+        imgSrc: HOMENEST_IMG,
+        link: "https://homenest.software/",
+    },
+    {
         title: "Lover's Lawn Services",
         description: "“A promotional website for a lawn care service, user-friendly design.”",
         technology: "Technology: WordPress, Elementor",
@@ -70,7 +75,7 @@ const listProject = [
         description: "“A real estate service website focused on property presentation and clear service promotion.”",
         technology: "Technology: WordPress, Elementor",
         imgSrc: KCX,
-        link: "https://h6.homenest.tech/",
+        link: "#projects",
     },
     {
         title: "CNC Marketplace",
@@ -98,13 +103,6 @@ const listProject = [
         description: "“Building a sales management system for retail chains.”",
         technology: "Technology: Spring Boot, React, AntD",
         imgSrc: Thesis1,
-        link: "#projects",
-    },
-    {
-        title: "Databae Systems course ",
-        description: "“Build a DS for supermarket chain's membership registration”",
-        technology: "Technology: MySQL, Bootstrap, Node.JS",
-        imgSrc: Dbs,
         link: "#projects",
     },
     {
