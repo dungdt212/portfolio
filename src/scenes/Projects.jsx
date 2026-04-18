@@ -75,7 +75,7 @@ const listProject = [
         description: "“A real estate service website focused on property presentation and clear service promotion.”",
         technology: "Technology: WordPress, Elementor",
         imgSrc: KCX,
-        link: "#projects",
+        link: "https://kimcuongxanh.com.vn/",
     },
     {
         title: "CNC Marketplace",
